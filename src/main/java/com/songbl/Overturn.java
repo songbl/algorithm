@@ -15,6 +15,10 @@ package com.songbl;
  * <p>
  * 方案二：
  * 直接首和尾 交换
+ *
+ *
+ * 方案三：
+ *  数学思维
  */
 
 public class Overturn {
@@ -94,14 +98,13 @@ public class Overturn {
     }
 
 
-    // 使用取余算法
-
+    // 使用取余算法；rev⋅10+digi
 
     public static int reverse3(int x) {
         int res = 0;
         while (x != 0) {
-
-            //处理越界
+            //处理越界。
+            // 粗矿的判断就是    Integer.MIN_VALUE <digs * 10<Integer.MAX_VALUE
             if (res < Integer.MIN_VALUE / 10 || res > Integer.MAX_VALUE / 10) {
                 return 0;
             }
